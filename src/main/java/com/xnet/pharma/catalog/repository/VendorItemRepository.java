@@ -5,8 +5,11 @@
  */
 package com.xnet.pharma.catalog.repository;
 
+
 import com.xnet.pharma.catalog.entity.VendorItem;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.Optional;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +20,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VendorItemRepository extends MongoRepository<VendorItem, Serializable> {
 
+    Optional<VendorItem> findByItem_IdAndVendor_IdAndExpireDate( String itemId,String vendorId ,Date expireDate);
 }

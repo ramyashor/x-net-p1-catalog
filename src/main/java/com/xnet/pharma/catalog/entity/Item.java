@@ -17,7 +17,7 @@ public class Item {
 
     @Id
     @Indexed
-    private String gId;
+    private String id;
     @Indexed
     private String barcode;
     @Indexed
@@ -27,6 +27,7 @@ public class Item {
     private String discriptionEn;
     private String discriptionAr;
     private float price;
+    private float discountPercentage;
     @Indexed
     private Category category;
     @Indexed
@@ -35,11 +36,11 @@ public class Item {
     private boolean deleted;
 
     public String getgId() {
-        return gId;
+        return id;
     }
 
     public void setgId(String gId) {
-        this.gId = gId;
+        this.id = gId;
     }
 
     public String getBarcode() {
@@ -112,6 +113,14 @@ public class Item {
 
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
+    }
+
+    public float getDiscountPercentage() {
+        return discountPercentage;
+    }
+
+    public void setDiscountPercentage(float discountPercentage) {
+        this.discountPercentage = discountPercentage;
     }
 
     

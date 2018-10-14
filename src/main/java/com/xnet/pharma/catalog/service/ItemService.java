@@ -5,13 +5,17 @@
  */
 package com.xnet.pharma.catalog.service;
 
-import org.springframework.stereotype.Service;
+import com.xnet.pharma.catalog.entity.Item;
 
 /**
  *
  * @author ramy
  */
-@Service
+
 public interface ItemService {
+    
+    
+    Item  findItemById(String Id);
+    boolean isItem(String itemId);
     
 }

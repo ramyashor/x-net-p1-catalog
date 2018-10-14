@@ -21,6 +21,8 @@ public class Vendor {
     private String nameEn;
     @Indexed
     private String nameAr;
+    private boolean active;
+    private  boolean online;
 
     public String getId() {
         return id;
@@ -46,4 +48,21 @@ public class Vendor {
         this.nameAr = nameAr;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
+
+    
 }

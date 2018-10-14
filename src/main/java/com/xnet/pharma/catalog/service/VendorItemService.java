@@ -5,16 +5,23 @@
  */
 package com.xnet.pharma.catalog.service;
 
+
+import com.xnet.pharma.catalog.dto.VendorItemDTO;
 import com.xnet.pharma.catalog.entity.VendorItem;
+import java.util.Date;
 import java.util.List;
-import org.springframework.stereotype.Service;
+import java.util.Optional;
 
 /**
  *
  * @author ramy
  */
-
 public interface VendorItemService {
-    
+
     List<VendorItem> findAllVendorItems();
+
+    VendorItem  save(VendorItemDTO vendorItemDTO);
+    Optional<VendorItem>  findByItemIdAndExpireDateAndVendorId(String itemId,String vendorId,Date expireDate);
+    
+
 }

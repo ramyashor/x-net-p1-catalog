@@ -5,6 +5,7 @@
  */
 package com.xnet.pharma.catalog.service;
 
+import com.xnet.pharma.catalog.entity.Vendor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,5 +14,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface VendorService {
+ 
     
+    boolean isAuthorizedVendor(String vendorId);
+    Vendor findVendorById(String  vendorId);
 }
